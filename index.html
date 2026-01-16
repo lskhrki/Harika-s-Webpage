@@ -124,37 +124,6 @@
 </audio>
 
 <script>
-    function toggleTheme() {
-        document.body.classList.toggle("dark");
-
-        const sound = document.getElementById("toggleSound");
-
-        if (sound) {
-            sound.currentTime = 0;
-            sound.play().catch(err => {
-                console.log("Audio error:", err);
-            });
-        }
-    }
-</script>
-<script>
-    function navClick(el) {
-        // remove active from all links
-        document.querySelectorAll('.nav-links a')
-            .forEach(link => link.classList.remove('active'));
-
-        // add active to clicked one
-        el.classList.add('active');
-
-        // play sound
-        const sound = document.getElementById('navSound');
-        if (sound) {
-            sound.currentTime = 0;
-            sound.play().catch(() => {});
-        }
-    }
-</script>
-<script>
 function toggleTheme() {
     document.body.classList.toggle("dark");
 
@@ -162,6 +131,21 @@ function toggleTheme() {
     if (sound) {
         sound.currentTime = 0;
         sound.play().catch(() => {});
+    }
+}
+</script>
+<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+<!-- 🔊 TOGGLE SOUND -->
+<audio id="toggleSound" src="C:\Users\proph\OneDrive\Desktop\My Website\mouse-click-sfx-free-376869.mp3" preload="auto"></audio>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+
+    const sound = document.getElementById("toggleSound");
+    if (sound) {
+        sound.currentTime = 0;
+        sound.play().catch(e => console.log(e));
     }
 }
 </script>
