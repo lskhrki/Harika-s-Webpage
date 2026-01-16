@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- 🌷 Hero -->
     <header class="hero">
         <h1>Hi, I’m Challapalli Lakshmi Harika ♡</h1>
         <p>engineering student • creator • soft chaos</p>
@@ -23,9 +25,13 @@
     <a href="#blog" onclick="navClick(this)">thoughts</a>
     <a href="#contact" onclick="navClick(this)">contact</a>
 </nav>
+
+<!-- nav click sound -->
 <audio id="navSound" src="C:\Users\proph\OneDrive\Desktop\My Website\mouse-click-sfx-free-376869.mp3"></audio>
 
     </nav>
+
+    <!-- 🌸 About -->
     <section id="about" class="section about">
         <h2>about me</h2>
         <p>
@@ -34,6 +40,8 @@
             i like soft aesthetics, deep thoughts, and building things that feel warm.
         </p>
     </section>
+
+    <!-- 🍓 Likes -->
     <section id="likes" class="section">
         <h2>things i love</h2>
         <p>just some tiny joys ✨</p>
@@ -45,6 +53,7 @@
             <li>☁️ quiet moments + deep talks</li>
         </ul>
     </section>
+<!-- 💡 Skills -->
 <section id="skills" class="section skills">
     <h2>skills</h2>
     <p>things i work with & things i’m good at ✨</p>
@@ -60,6 +69,7 @@
     </div>
 </section>
 
+    <!-- 🎨 Work -->
     <section id="work" class="section work">
         <h2>what i do</h2>
         <p>a few things i’m building and learning</p>
@@ -70,6 +80,8 @@
             <li>📚 learning to grow every day</li>
         </ul>
     </section>
+
+    <!-- 📝 Blog / Thoughts -->
     <section id="blog" class="section">
         <h2>little thoughts</h2>
         <p>
@@ -77,6 +89,8 @@
             this space is for soft honesty and quiet feelings.
         </p>
     </section>
+
+    <!-- 💌 Contact -->
     <section id="contact" class="section contact">
         <h2>let’s talk</h2>
         <p>
@@ -95,6 +109,7 @@
         </div>
     </section>
 
+    <!-- 🌷 Footer -->
     <footer class="footer">
         made with ♡ by Challapalli Lakshmi Harika
     </footer>
@@ -121,11 +136,14 @@
 </script>
 <script>
     function navClick(el) {
+        // remove active from all links
         document.querySelectorAll('.nav-links a')
             .forEach(link => link.classList.remove('active'));
 
+        // add active to clicked one
         el.classList.add('active');
 
+        // play sound
         const sound = document.getElementById('navSound');
         if (sound) {
             sound.currentTime = 0;
