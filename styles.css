@@ -1,0 +1,273 @@
+/* 🌸 Google Font (cute + clean) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Body --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #ffe6f0, #ffd6e8);
+    color: #3a1c2a;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* --- Hero --- */
+.hero {
+    padding: 70px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+/* --- Navigation --- */
+.nav-links {
+    margin-bottom: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: 500;
+    color: #b03060;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "♡";
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    opacity: 1;
+}
+
+/* --- Sections --- */
+.section {
+    background: rgba(255, 255, 255, 0.75);
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 35px 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+}
+
+/* --- Avatar --- */
+.avatar {
+    width: 140px;
+    border-radius: 50%;
+    margin-bottom: 14px;
+    border: 4px solid #ffb6c1;
+}
+
+/* --- Buttons / Links --- */
+.link-buttons a {
+    display: inline-block;
+    margin: 12px;
+    padding: 12px 28px;
+
+    background: linear-gradient(135deg, #ff6fae, #f8d1e1);
+    color: #ffffff;                 /* 👈 FIX */
+    font-weight: 600;               /* 👈 FIX */
+
+    text-decoration: none;
+    border-radius: 999px;
+    font-size: 1rem;
+
+    box-shadow:
+        0 8px 18px rgba(255, 105, 180, 0.45),
+        inset 0 0 0 2px rgba(255,255,255,0.15); /* 👈 glow edge */
+
+    transition: all 0.3s ease;
+}
+.link-buttons a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+        0 12px 26px rgba(247, 163, 205, 0.65),
+        inset 0 0 0 2px rgba(255,255,255,0.25);
+}
+body.dark .link-buttons a {
+    background: linear-gradient(135deg, #ffadd8, #9d5372);
+}
+
+.section li {
+    background: rgba(255, 182, 193, 0.25);
+    padding: 8px 14px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.link-buttons a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6);
+}
+
+/* --- Work List --- */
+.work ul {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.work li {
+    padding: 8px;
+    font-size: 0.95rem;
+}
+
+/* --- Contact --- */
+.contact a {
+    color: #ff4f9a;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* --- Footer --- */
+.footer {
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+body.dark {
+    background: linear-gradient(180deg, #1a0f17, #12000c);
+    color: #ffe4f0;
+}
+
+body.dark .section {
+    background: rgba(40, 20, 30, 0.9);
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.15);
+}
+
+body.dark .nav-links a {
+    color: #ff9ecb;
+}
+
+body.dark .link-buttons a {
+    background: linear-gradient(135deg, #ff6fae, #ff4f9a);
+}
+
+body.dark .theme-toggle {
+    background: #2a1220;
+    color: #fff;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    border: none;
+
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, #ffb6d9, #ff7eb3);
+    color: #fff;
+
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.12) rotate(8deg);
+}
+body.dark .theme-toggle {
+    background: linear-gradient(135deg, #3a1c2a, #1f0c16);
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.25);
+}
+/* 🌙 DARK MODE – FORCE VISIBILITY */
+body.dark .link-buttons a {
+    background: linear-gradient(135deg, #ff9acb, #ff5fa2);
+    color: #1a0f17;                 /* 👈 DARK TEXT for contrast */
+    font-weight: 700;
+
+    box-shadow:
+        0 0 0 2px rgba(255, 154, 203, 0.9),
+        0 12px 30px rgba(255, 105, 180, 0.6);
+}
+
+/* hover in dark mode */
+body.dark .link-buttons a:hover {
+    transform: translateY(-3px) scale(1.07);
+    box-shadow:
+        0 0 0 2px rgba(255, 154, 203, 1),
+        0 16px 40px rgba(255, 105, 180, 0.85);
+}
+/* nav base */
+.nav-links a {
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: 500;
+    color: #ff7eb3;
+    position: relative;
+    padding: 6px 10px;
+    transition: all 0.25s ease;
+}
+
+/* hover */
+.nav-links a:hover {
+    color: #ff4f9a;
+}
+
+/* active / highlighted link */
+.nav-links a.active {
+    color: #fff;
+    background: linear-gradient(135deg, #ff6fae, #ff3f8e);
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+body.dark .nav-links a {
+    color: #ff9acb;
+}
+
+body.dark .nav-links a.active {
+    color: #1a0f17;
+    background: linear-gradient(135deg, #ff9acb, #ff5fa2);
+    box-shadow: 0 6px 24px rgba(255, 105, 180, 0.85);
+}
+/* 💡 Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.skills-list span {
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    background: linear-gradient(135deg, #ffb6d9, #ff7eb3);
+    color: #fff;
+
+    box-shadow: 0 6px 16px rgba(255, 105, 180, 0.45);
+}
+body.dark .skills-list span {
+    background: linear-gradient(135deg, #ff9acb, #ff5fa2);
+    color: #1a0f17;
+    box-shadow: 0 6px 18px rgba(255, 105, 180, 0.6);
+}

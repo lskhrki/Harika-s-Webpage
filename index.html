@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challapalli Lakshmi Harika's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 🌷 Hero -->
+    <header class="hero">
+        <h1>Hi, I’m Challapalli Lakshmi Harika ♡</h1>
+        <p>engineering student • creator • soft chaos</p>
+    </header>
+
+    <button class="theme-toggle" onclick="toggleTheme()">
+    🌙
+</button>
+<nav class="nav-links">
+    <a href="#about" onclick="navClick(this)">about</a>
+    <a href="#likes" onclick="navClick(this)">likes</a>
+    <a href="#skills" onclick="navClick(this)">skills</a>
+    <a href="#work" onclick="navClick(this)">work</a>
+    <a href="#blog" onclick="navClick(this)">thoughts</a>
+    <a href="#contact" onclick="navClick(this)">contact</a>
+</nav>
+
+<!-- nav click sound -->
+<audio id="navSound" src="C:\Users\proph\OneDrive\Desktop\My Website\mouse-click-sfx-free-376869.mp3"></audio>
+
+    </nav>
+
+    <!-- 🌸 About -->
+    <section id="about" class="section about">
+        <h2>about me</h2>
+        <p>
+            i’m an engineering student who loves creating content, learning new things,
+            and romanticizing life a little too much.  
+            i like soft aesthetics, deep thoughts, and building things that feel warm.
+        </p>
+    </section>
+
+    <!-- 🍓 Likes -->
+    <section id="likes" class="section">
+        <h2>things i love</h2>
+        <p>just some tiny joys ✨</p>
+        <ul>
+            <li>🎧 music that feels like 2am</li>
+            <li>📖 late-night reading</li>
+            <li>🎀 pink themes & cozy visuals</li>
+            <li>🎥 making study & lifestyle content</li>
+            <li>☁️ quiet moments + deep talks</li>
+        </ul>
+    </section>
+<!-- 💡 Skills -->
+<section id="skills" class="section skills">
+    <h2>skills</h2>
+    <p>things i work with & things i’m good at ✨</p>
+
+    <div class="skills-list">
+        <span>c language</span>
+        <span>python</span>
+        <span>java</span>
+        <span>html</span>
+        <span>css</span>
+        <span>figma</span>
+        <span>communication</span>
+    </div>
+</section>
+
+    <!-- 🎨 Work -->
+    <section id="work" class="section work">
+        <h2>what i do</h2>
+        <p>a few things i’m building and learning</p>
+        <ul>
+            <li>📌 study vlogs & content creation</li>
+            <li>💻 web design (html & css)</li>
+            <li>🎵 music & creative projects</li>
+            <li>📚 learning to grow every day</li>
+        </ul>
+    </section>
+
+    <!-- 📝 Blog / Thoughts -->
+    <section id="blog" class="section">
+        <h2>little thoughts</h2>
+        <p>
+            sometimes I write about motivation, self-growth, or random midnight realizations.
+            this space is for soft honesty and quiet feelings.
+        </p>
+    </section>
+
+    <!-- 💌 Contact -->
+    <section id="contact" class="section contact">
+        <h2>let’s talk</h2>
+        <p>
+            if you want to collaborate, talk, or just say hi —
+            my inbox is always open ♡
+        </p>
+        <p>
+            <a href="haruchillzz@gmail.com">haruchillzz@gmail.com</a>
+        </p>
+
+        <div class="link-buttons">
+            <a href="https://www.instagram.com/haru_vlogss/">Instagram</a>
+            <a href="https://www.youtube.com/@haru-vlogs">Youtube</a>
+            <a href="https://github.com/lskhrki">Github</a>
+            <a href="https://www.linkedin.com/in/challapalli-lakshmi-harika-008434371/">Linkedin</a>
+        </div>
+    </section>
+
+    <!-- 🌷 Footer -->
+    <footer class="footer">
+        made with ♡ by Challapalli Lakshmi Harika
+    </footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+    }
+</script>
+<audio id="toggleSound" src="C:\Users\proph\OneDrive\Desktop\My Website\mouse-click-sfx-free-376869.mp3""></audio>
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+
+        const sound = document.getElementById("toggleSound");
+
+        if (sound) {
+            sound.currentTime = 0;
+            sound.play().catch(err => {
+                console.log("Audio error:", err);
+            });
+        }
+    }
+</script>
+<script>
+    function navClick(el) {
+        // remove active from all links
+        document.querySelectorAll('.nav-links a')
+            .forEach(link => link.classList.remove('active'));
+
+        // add active to clicked one
+        el.classList.add('active');
+
+        // play sound
+        const sound = document.getElementById('navSound');
+        if (sound) {
+            sound.currentTime = 0;
+            sound.play().catch(() => {});
+        }
+    }
+</script>
+
+</body>
+</html>
