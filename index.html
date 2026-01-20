@@ -27,7 +27,7 @@
 </nav>
 
 <!-- nav click sound -->
-<audio id="navSound" src="mouse-click-sfx-free-376869.mp3"></audio>
+<audio id="navSound" src="C:\Users\proph\OneDrive\Desktop\My Website\mouse-click-sfx-free-376869.mp3"></audio>
 
     </nav>
 
@@ -36,8 +36,8 @@
         <h2>about me</h2>
         <p>
             i’m an engineering student who loves creating content, learning new things,
-            and romanticizing life a little too much.  
-            i like soft aesthetics, deep thoughts, and building things that feel warm.
+            and Creating new things.  
+            i like working with people(y'know as in teams), Ice Coffee, and building things that feel warm.
         </p>
     </section>
 
@@ -98,7 +98,7 @@
             my inbox is always open ♡
         </p>
         <p>
-            <a href="https://mail.google.com/mail/u/3/#inbox">haruchillzz@gmail.com</a>
+            <a href="https://mail.google.com/mail/?view=cm&to=haruchillzz@gmail.com" target="_blank">haruchillzz@gmail.com</a>
         </p>
 
         <div class="link-buttons">
@@ -119,37 +119,51 @@
         document.body.classList.toggle("dark");
     }
 </script>
-<audio id="toggleSound" preload="auto">
-    <source src="mouse-click-sfx-free-376869.mp3" type="audio/mpeg">
-</audio>
-
+<audio id="toggleSound" src="C:\Users\proph\OneDrive\Desktop\My Website\mouse-click-sfx-free-376869.mp3""></audio>
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
 <script>
 function toggleTheme() {
-    document.body.classList.toggle("dark");
-
+    const body = document.body;
+    const btn = document.getElementById("themeToggle");
     const sound = document.getElementById("toggleSound");
+
+    const isDark = body.classList.toggle("dark");
+
+    // change emoji
+    btn.textContent = isDark ? "🌞" : "🌙";
+
+    // play sound (if you’re using it)
     if (sound) {
         sound.currentTime = 0;
         sound.play().catch(() => {});
     }
 }
 </script>
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-<!-- 🔊 TOGGLE SOUND -->
-<audio id="toggleSound" src="mouse-click-sfx-free-376869.mp3" preload="auto"></audio>
+.theme-toggle {
+    transition: transform 0.25s ease;
+}
+
+.theme-toggle:active {
+    transform: scale(0.9) rotate(20deg);
+}
 
 <script>
-function toggleTheme() {
-    document.body.classList.toggle("dark");
+    function navClick(el) {
+        // remove active from all links
+        document.querySelectorAll('.nav-links a')
+            .forEach(link => link.classList.remove('active'));
 
-    const sound = document.getElementById("toggleSound");
-    if (sound) {
-        sound.currentTime = 0;
-        sound.play().catch(e => console.log(e));
+        // add active to clicked one
+        el.classList.add('active');
+
+        // play sound
+        const sound = document.getElementById('navSound');
+        if (sound) {
+            sound.currentTime = 0;
+            sound.play().catch(() => {});
+        }
     }
-}
 </script>
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 
 </body>
 </html>
