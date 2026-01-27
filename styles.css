@@ -271,3 +271,15 @@ body.dark .skills-list span {
     color: #1a0f17;
     box-shadow: 0 6px 18px rgba(255, 105, 180, 0.6);
 }
+/* 🌸 Scroll reveal base state */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 🌷 When visible */
+.section.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
