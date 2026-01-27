@@ -28,7 +28,6 @@
 <audio id="navSound" src="mouse-click-sfx-free-376869.mp3"></audio>
     </nav>
     <!-- 🌸 About -->
-    <div class="heart-reveal">♡</div>
     <section id="about" class="section about">
         <h2>about me</h2>
         <p>
@@ -148,32 +147,7 @@ function toggleTheme() {
         }
     }
 </script>
-<script>
-    const sections = document.querySelectorAll('.section');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
-
-                const heart = entry.target.querySelector('.heart-reveal');
-                if (heart) {
-                    heart.classList.add('show');
-
-                    // stop the pulse after a moment
-                    setTimeout(() => {
-                        heart.classList.remove('show');
-                        heart.style.opacity = "0.4";
-                    }, 2200);
-                }
-
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    sections.forEach(section => observer.observe(section));
-</script>
 
 
 </body>
